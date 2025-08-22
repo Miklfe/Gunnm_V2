@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+
+:root {
+    --text-color: #FFF;
+    --main-color: #d3d3d3;
+    --clock-color: #d43333;
+    --highlight-color: #000000;
+    --highlight-opacity: 0.5;
+    --font-style: 'Roboto';
+    --zoom-clock: 1
+
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:  var(--font-style);
+    background: #333;
+    color: #fff;
+    line-height: 1.6;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    /*bottom: 80px;
+    left: 20px;*/
+}
+
+.wrapper {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;         
+}
+
+.slider {
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content{
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    opacity: 0;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 35px;
+}
+
+.slide .content h1 {
+    margin-bottom: 10px;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+.buttons button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+.buttons button {
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttons button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+@media (max-width: 500px){
+    .slide .content{
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+
+    .slide.current .content{
+        transform: translateY(-300px);
+    }
+}
+
+/* Background Images */
+
+.slide:first-child {
+    background: url('src/Gunnm4/1.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+    background: url('src/Gunnm4/2.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(3) {
+    background: url('src/Gunnm4/3.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(4) {
+    background: url('src/Gunnm4/4.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(5) {
+    background: url('src/Gunnm4/5.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(6) {
+    background: url('src/Gunnm4/6.jpg') no-repeat center center/cover;
+}
+
+.wrapper-horloge-container {
+ position: absolute;
+  display: flex;
+  transform: scale(var(--zoom-clock));
+}
+
+.wrapper-horloge-container.center{
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wrapper-horloge-container.center .wrapper-date{
+    margin-top: 0;
+}
+
+.wrapper-horloge-container.top-left{
+    top:0;
+    left:0;
+    align-items: flex-start;
+    transform-origin: top left;
+}
+
+.wrapper-horloge-container.top-right{
+    top:0;
+    right:0;
+    align-items: flex-start;
+    transform-origin: top right;
+}
+
+.wrapper-horloge-container.bottom-right{
+    bottom:50px;
+    right:0;
+    align-items: flex-start;
+    transform-origin: bottom right;
+}
+
+.wrapper-horloge-container.bottom-left{
+    bottom:50px;
+    left:0;
+    align-items: flex-start;
+    transform-origin: bottom left;
+}
+
+.wrapper-horloge-background {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.wrapper-horloge-background svg {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: var(--highlight-color);
+  opacity: var(--highlight-opacity);
+
+}
+
+.wrapper-horloge {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    margin:50px
+}
+
+.highlight-date {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -10px;
+    margin-left:-10px;
+    background: var(--highlight-color);
+    opacity: var(--highlight-opacity);
+    z-index: -1;
+}
+
+.wrapper-date{
+    position: relative;
+
+    font-size: 50px;
+    color: var(--text-color);
+    z-index:1;
+    margin-left:-10px;
+    margin-right: 10px;
+    padding: 10px;
+    margin-top:150px
+}
+
+.bar-seconds,
+.number-hours {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.bar-seconds span {
+    position: absolute;
+    transform: rotate(calc(var(--index) * 6deg));
+    inset: -20px;
+    text-align: center;
+}
+.bar-seconds span p {
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background: var(--clock-color);
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--main-color);
+}
+.bar-seconds span:nth-child(5n) p { /* 5n pour dire tout les mutliples de 5 */
+    width: 6px;
+    height: 18px;
+    transform: translateY(1px);
+}
+.number-hours span {
+    position: absolute;
+    transform: rotate(calc(var(--index) * 30deg));
+    inset: 6px;
+    text-align: center;
+}
+.number-hours span p {
+    font-size: 25px;
+    color: var(--clock-color);
+    text-shadow: 0 0 10px var(--main-color);
+    transform: rotate(calc(var(--index) * -30deg));
+}
+.hands-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hands-box .hand {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.hands-box .hand i {
+    display: inline-block;
+    transform-origin: bottom;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--main-color);
+}
+.hands-box .hours {
+    width: 200px;
+    height: 200px;
+}
+.hands-box .hours i {
+    width: 4px;
+    height: 110px;
+    background: var(--main-color);
+}
+.hands-box .minutes {
+    width: 280px;
+    height: 280px;
+}
+.hands-box .minutes::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--main-color);
+}
+.hands-box .minutes i {
+    width: 4px;
+    height: 140px;
+    background: var(--main-color);
+}
+.hands-box .seconds {
+    width: 295px;
+    height: 295px;
+}
+.hands-box .seconds::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+.hands-box .seconds i {
+    width: 3px;
+    height: 190px; /* 240px car le parent est de 480 */
+    background: white;
+    box-shadow: none;
+}

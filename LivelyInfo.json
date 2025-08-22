@@ -1,0 +1,17 @@
+{
+  "AppVersion": "1.1.0.1",
+  "Title": "Gunnm",
+  "Thumbnail": "3av2ptf4.jpg",
+  "Preview": "pi2nkpoh.gif",
+  "Desc": "backgrond Gunnm with clock",
+  "Author": "Miklfe",
+  "License": "MIT",
+  "Contact": "",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": "--system-nowplaying --audio",
+  "IsAbsolutePath": false,
+  "Id": null,
+  "Tags": null,
+  "Version": 0
+}

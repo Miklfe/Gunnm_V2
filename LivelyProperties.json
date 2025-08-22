@@ -1,0 +1,68 @@
+{
+  "SpeedSlideshow":{
+    "max": 300,
+    "min": 5,
+    "step": 5,
+    "text": "vitesse de défilement des images (en seconde)",
+    "type": "slider",
+    "help": "vitesse de défilement des images",
+    "value": 10
+  },
+  "ZoomClock": {
+    "type": "dropdown",
+    "value": 1,
+    "text": "Taille de l'horloge",
+    "items": [
+      "Large",
+      "Medium",
+      "Petite",
+      "Très petite"]
+  },
+    "ClockPosition": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Position de l'horloge",
+    "items": [
+      "Centre",
+      "Haut gauche",
+      "Haut droit",
+      "Bas gauche",
+      "Bas droit"]
+  },
+  "ClockColor": {
+    "text": "Couleur de l'horloge",
+    "type": "color",
+    "value": "#B5D4D3"
+  },
+  "DateFontColor": {
+    "text": "Couleur de la police de la date",
+    "description": "Couleur de la police de la date",
+    "type": "color",
+    "value": "#B5D4D3"
+  },
+  "HighlightingColor": {
+    "text": "Couleur de la mise en évidence",
+    "description": "Couleur de la mise en évidence",
+    "type": "color",
+    "value": "#000000"
+  },
+  "HightlightingOpacity": {
+    "max": 100,
+    "min": 0,
+    "step": 1,
+    "text": "opacité de la mise en évidence",
+    "type": "slider",
+    "help": "opacité de la mise en évidence",
+    "value": 50
+  },
+  "FontStyle": {
+    "text": "Style de police",
+    "type": "dropdown",
+    "value": 1,
+    "items": [
+      "Roboto",
+      "Pinyon Script",
+      "Fascinate Inline"
+    ]
+  }
+}

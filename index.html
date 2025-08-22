@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Full Screen Slider</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+        <div class="slider">
+            <div class="slide current">
+            </div>
+            <div class="slide">
+            </div>
+            <div class="slide">
+            </div> 
+            <div class="slide">
+            </div>
+            <div class="slide">
+            </div>
+            <div class="slide">
+            </div>
+        </div> 
+        <div class="wrapper-horloge-container center">  
+            <div class="wrapper-horloge-background">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <path id="clock-background"
+                    d="m200 10a190 190 0 0 0-190 190 190 190 0 0 0 190 190 190 190 0 0 0 183.3-140h6.6973v-50-50h-6.6973a190 190 0 0 0-183.3-140z"
+                    fill="currentColor" />
+                </svg>
+                <div class="wrapper-horloge">
+                    <div class="bar-seconds"></div>
+                    <div class="number-hours"></div>
+                    <div class="hands-box">
+                        <div class="hand hours"><i></i></div>
+                        <div class="hand minutes"><i></i></div>
+                        <div class="hand seconds"><i></i></div>
+                    </div>
+                </div> 
+            </div>
+            <div class="wrapper-date">
+                <div class="highlight-date"></div>
+                <div id="date" class="date">
+                    <p> </p>
+                </div>
+                 <canvas id="canvas"></canvas>
+           </div>
+
+        </div>
+
+    <script src="js/slideshow.js"></script>
+    <script src="js/horloge.js"></script>
+    <script src="js/lively-props.js"></script>
+    <script src="js/visualizer.js"></script>
+
+ <script src="js/visualizer_dev.js"></script>
+
+          <script >
+    /* setTimeout(() => {
+        livelyPropertyListener("SpeedSlideshow",800);
+    }, 2000);*/
+    /*setTimeout(() => {
+        livelyPropertyListener("ClockPosition", 1);
+    }, 4000);*/
+    /*   setTimeout(() => {
+        livelyPropertyListener("ClockPosition", 2);
+    }, 6000);
+    setTimeout(() => {
+        livelyPropertyListener("ClockPosition", 3);
+    }, 8000);
+    setTimeout(() => {
+        livelyPropertyListener("ClockPosition", 4);
+    }, 10000);
+   setTimeout(() => {
+        livelyPropertyListener("ClockPosition", 0);
+    }, 12000);*/
+    setTimeout(() => {
+        livelyPropertyListener("ZoomClock", 2);
+    }, 2000);
+    </script>
+
+ </body>
+</html>

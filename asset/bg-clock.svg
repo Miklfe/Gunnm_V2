@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path id="clock-background"
+        d="m200 10a190 190 0 0 0-190 190 190 190 0 0 0 190 190 190 190 0 0 0 183.3-140h6.6973v-50-50h-6.6973a190 190 0 0 0-183.3-140z"
+        fill="#00000050" />
+</svg>
