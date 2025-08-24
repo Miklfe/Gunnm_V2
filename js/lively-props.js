@@ -1,7 +1,6 @@
 function livelyPropertyListener(name, val) {
     switch (name) {
         case "SpeedSlideshow":
-            console.log("SpeedSlideshow", val);
             intervalTime = Number(val) * 1000;
             clearInterval(slideInterval);
             slideInterval = setInterval(nextSlide, intervalTime);
@@ -25,7 +24,6 @@ function livelyPropertyListener(name, val) {
                     val = "bottom-right";
                     break;
             }
-            //console.log(val);
             const el = document.querySelector(".wrapper-horloge-container");
             el.classList.remove("center", "top-left", "top-right", "bottom-left", "bottom-right");
             el.classList.add(val);
@@ -74,7 +72,5 @@ function livelyPropertyListener(name, val) {
             }
             document.documentElement.style.setProperty("--font-style", val);
             break;
-
-
     }
 }

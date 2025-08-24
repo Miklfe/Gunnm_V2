@@ -10,8 +10,6 @@
     --highlight-opacity: 0.5;
     --font-style: 'Roboto';
     --zoom-clock: 1
-
-
 }
 
 * {
@@ -125,30 +123,10 @@ position: fixed;
     }
 }
 
-/* Background Images */
-
-.slide:first-child {
-    background: url('src/Gunnm4/1.jpg') no-repeat center center/cover;
-}
-
-.slide:nth-child(2) {
-    background: url('src/Gunnm4/2.jpg') no-repeat center center/cover;
-}
-
-.slide:nth-child(3) {
-    background: url('src/Gunnm4/3.jpg') no-repeat center center/cover;
-}
-
-.slide:nth-child(4) {
-    background: url('src/Gunnm4/4.jpg') no-repeat center center/cover;
-}
-
-.slide:nth-child(5) {
-    background: url('src/Gunnm4/5.jpg') no-repeat center center/cover;
-}
-
-.slide:nth-child(6) {
-    background: url('src/Gunnm4/6.jpg') no-repeat center center/cover;
+.slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .wrapper-horloge-container {
