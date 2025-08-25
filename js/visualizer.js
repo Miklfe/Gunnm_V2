@@ -1,3 +1,7 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*  Visualizer                  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 let canvas = document.getElementById("canvas");
 let linesColor = "rgba(255, 255, 255, 1)";
 let ctx = canvas.getContext("2d");

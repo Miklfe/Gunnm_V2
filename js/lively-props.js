@@ -1,3 +1,7 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*  Property Lively             */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 function livelyPropertyListener(name, val) {
     switch (name) {
         case "SpeedSlideshow":

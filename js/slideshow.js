@@ -1,3 +1,7 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*  Wallpaper slideshow        */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 let intervalTime = 5000;
 let slideInterval;
 let slideCount;

@@ -1,5 +1,8 @@
-//Ryan Queva//
-/*https://codepen.io/RyanQueva*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*  Horloge                       */
+/*  auteur: Ryan Queva            */
+/*  https://codepen.io/RyanQueva  */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 "use strict";
 
@@ -9,6 +12,7 @@ const barSeconds = document.querySelector('.bar-seconds');
 const handHours = document.querySelector('.hand.hours');
 const handMinutes = document.querySelector('.hand.minutes');
 const handSeconds = document.querySelector('.hand.seconds');
+
 
 const numberElement = [];
 const barElement = [];
@@ -42,7 +46,10 @@ getCurrentTime();
 
 setInterval(getCurrentTime, 1000);
 
-const dateElement = document.querySelector('.wrapper-date .date p');
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* affichage de la date     */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 function updateDate() {
     const now = new Date();
@@ -53,7 +60,7 @@ function updateDate() {
         year: 'numeric'
     };
     const formattedDate = new Intl.DateTimeFormat('fr-FR', options).format(now);
-
+    const dateElement = document.querySelector('.wrapper-date .date p');
     dateElement.textContent = formattedDate;
 }
 
