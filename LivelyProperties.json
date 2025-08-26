@@ -1,48 +1,50 @@
 {
-  "SpeedSlideshow":{
+  "SpeedSlideshow": {
     "max": 300,
     "min": 5,
     "step": 5,
-    "text": "vitesse de défilement des images (en seconde)",
+    "text": "Slideshow speed (in seconds)",
     "type": "slider",
-    "help": "vitesse de défilement des images",
+    "help": "Speed of image scrolling",
     "value": 10
   },
   "ZoomClock": {
     "type": "dropdown",
     "value": 1,
-    "text": "Taille de l'horloge",
+    "text": "Clock Size",
     "items": [
       "Large",
       "Medium",
-      "Petite",
-      "Très petite"]
+      "Small",
+      "Very small"
+    ]
   },
-    "ClockPosition": {
+  "ClockPosition": {
     "type": "dropdown",
     "value": 0,
-    "text": "Position de l'horloge",
+    "text": "Clock Position",
     "items": [
-      "Centre",
-      "Haut gauche",
-      "Haut droit",
-      "Bas gauche",
-      "Bas droit"]
+      "Center",
+      "Top left",
+      "Top right",
+      "Bottom left",
+      "Bottom right"
+    ]
   },
   "ClockColor": {
-    "text": "Couleur de l'horloge",
+    "text": "Clock color",
     "type": "color",
     "value": "#B5D4D3"
   },
   "DateFontColor": {
-    "text": "Couleur de la police de la date",
-    "description": "Couleur de la police de la date",
+    "text": "Date font color",
+    "description": "Date font color",
     "type": "color",
     "value": "#B5D4D3"
   },
   "HighlightingColor": {
-    "text": "Couleur de la mise en évidence",
-    "description": "Couleur de la mise en évidence",
+    "text": "Highlighting color",
+    "description": "Highlighting color",
     "type": "color",
     "value": "#000000"
   },
@@ -50,13 +52,13 @@
     "max": 100,
     "min": 0,
     "step": 1,
-    "text": "opacité de la mise en évidence",
+    "text": "Highlighting opacity",
     "type": "slider",
-    "help": "opacité de la mise en évidence",
+    "help": "Highlighting opacity",
     "value": 50
   },
   "FontStyle": {
-    "text": "Style de police",
+    "text": "Font style",
     "type": "dropdown",
     "value": 1,
     "items": [

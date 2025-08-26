@@ -1,0 +1,47 @@
+{
+  "Languages": {
+    "fr-FR": {
+      "SpeedSlideshow": {
+        "text": "vitesse de défilement des images (en seconde)",
+        "help": "vitesse de défilement des images"
+      },
+      "ZoomClock": {
+        "text": "Taille de l'horloge",
+        "items": [
+          "Large",
+          "Medium",
+          "Petite",
+          "Très petite"
+        ]
+      },
+      "ClockPosition": {
+        "text": "Position de l'horloge",
+        "items": [
+          "Centre",
+          "Haut gauche",
+          "Haut droit",
+          "Bas gauche",
+          "Bas droit"
+        ]
+      },
+      "ClockColor": {
+        "text": "Couleur de l'horloge"
+      },
+      "DateFontColor": {
+        "text": "Couleur de la police de la date",
+        "description": "Couleur de la police de la date"
+      },
+      "HighlightingColor": {
+        "text": "Couleur de la mise en évidence",
+        "description": "Couleur de la mise en évidence"
+      },
+      "HightlightingOpacity": {
+        "text": "opacité de la mise en évidence",
+        "help": "opacité de la mise en évidence"
+      },
+      "FontStyle": {
+        "text": "Style de police"
+      }
+    }
+  }
+}

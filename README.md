@@ -1,18 +1,22 @@
 # Gunnm V2 - Lively Wallpaper
 
 🎨 **Gunnm V2** est un projet de **wallpaper interactif** conçu pour [Lively Wallpaper](https://github.com/rocksdanister/lively), qui combine esthétique et fonctionnalités pratiques.  
+![thumbnail](GunnmV2.jpg)
+![GIF animé](GunnmV2.gif)
 
 ## ✨ Fonctionnalités
 
-- 🕒 **Horloge analogique** élégante affichée en temps réel  
-- 📅 **Date du jour** directement intégrée au wallpaper  
-- 🎵 **Visualiseur audio** réactif à la musique et aux sons de votre PC  
+- 🕒 **Horloge analogique** élégante affichée en temps réel
+- 📅 **Date du jour** directement intégrée au wallpaper
+- 🎵 **Visualiseur audio** réactif à la musique et aux sons de votre PC
 
 ## 🚀 Installation
-1. Télécharger et installer [Lively Wallpaper](https://github.com/rocksdanister/lively/releases)  
+
+1. Télécharger et installer [Lively Wallpaper](https://github.com/rocksdanister/lively/releases)
 2. Cloner ce dépôt ou télécharger l’archive ZIP :
    ```bash
    git clone https://github.com/Miklfe/Gunnm_V2.git
+   ```
 3. Importer le projet dans Lively via l’interface (Add Wallpaper → Browse → sélectionner le dossier du projet)
 
 🛠️ Technologies utilisées
