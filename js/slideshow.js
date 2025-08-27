@@ -1,10 +1,24 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*  Wallpaper slideshow        */
+/*  Wallpaper slideshow        */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+console.log("slideshow.js loaded");
 let intervalTime = 5000;
 let slideInterval;
 let slideCount;
+let slides;
+
+const nextSlide = () => {
+    const current = document.querySelector('.current');
+
+    console.log('current slide:', Array.from(slides).indexOf(current) + 1);
+    current.classList.remove('current');
+    if (current.nextElementSibling) {
+        current.nextElementSibling.classList.add('current');
+    } else {
+        slides[0].classList.add('current');
+    }
+    setTimeout(() => current.classList.remove('current'));
+};
 
 function countImages(callback) {
     let count = 1;
@@ -20,6 +34,7 @@ function countImages(callback) {
 }
 
 countImages(slideCount => {
+    console.log(`Found ${slideCount} images.`);
     const slider = document.createElement("div");
     slider.classList.add("slider");
 
@@ -32,19 +47,7 @@ countImages(slideCount => {
     }
 
     document.getElementById("wrapper-slider").appendChild(slider);
-    const slides = document.querySelectorAll('.slide');
-
-    const nextSlide = () => {
-        const current = document.querySelector('.current');
-        current.classList.remove('current');
-        if (current.nextElementSibling) {
-            current.nextElementSibling.classList.add('current');
-        } else {
-            slides[0].classList.add('current');
-        }
-        setTimeout(() => current.classList.remove('current'));
-    };
+    slides = document.querySelectorAll('.slide');
 
     slideInterval = setInterval(nextSlide, intervalTime);
 });
-
