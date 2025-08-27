@@ -6,7 +6,6 @@ let canvas = document.getElementById("canvas");
 let linesColor = "rgba(255, 255, 255, 1)";
 let ctx = canvas.getContext("2d");
 let clientWidth = document.getElementById('date').clientWidth;
-console.log("clientWidth:", clientWidth);
 
 function setSize() {
     canvas.width = clientWidth;
@@ -32,9 +31,6 @@ function livelyAudioListener(frequencyData) {
         ctx.fillRect(x, midY, barWidth - 1, barHeight);
         x += barWidth;
     }
-}
-function livelyCurrentTrack(data) {
-    console.log("Current track data:", data);
 }
 
 window.onload = () => {

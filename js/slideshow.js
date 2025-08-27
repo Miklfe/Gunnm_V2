@@ -1,7 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*  Wallpaper slideshow        */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-console.log("slideshow.js loaded");
 let intervalTime = 5000;
 let slideInterval;
 let slideCount;
@@ -9,8 +8,6 @@ let slides;
 
 const nextSlide = () => {
     const current = document.querySelector('.current');
-
-    console.log('current slide:', Array.from(slides).indexOf(current) + 1);
     current.classList.remove('current');
     if (current.nextElementSibling) {
         current.nextElementSibling.classList.add('current');
@@ -34,7 +31,6 @@ function countImages(callback) {
 }
 
 countImages(slideCount => {
-    console.log(`Found ${slideCount} images.`);
     const slider = document.createElement("div");
     slider.classList.add("slider");
 
